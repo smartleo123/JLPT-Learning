@@ -1,4 +1,4 @@
-import json,html
+import json,html,hashlib
 from pathlib import Path
 root=Path(__file__).resolve().parents[1];db=json.loads((root/'data/study.json').read_text());e=html.escape
 concept_examples=json.loads((root/'data/concept-examples.json').read_text())
@@ -50,4 +50,6 @@ s='''<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name=
 <section id="review"><div class="section-head"><h2>主動回想</h2><span class="small">套用上方篩選；自我評估，不是模擬考分數</span></div><div id="recall" class="recall"><div class="label">先想，再看，再造句</div><h3>你能不看解說說出用法嗎？</h3><p class="small">每張卡先只顯示詞語或句型，展開後核對意思與使用限制。</p><button id="review-start">開始回想</button></div><p class="small">進度儲存在目前瀏覽器；換裝置前可匯出，匯入會合併收藏與已掌握條目。</p><button id="export">匯出學習進度</button> <label class="small">匯入進度 <input id="import" type="file" accept="application/json,.json"></label><span id="import-status" class="small" role="status"></span></section>
 <section id="sources"><div class="section-head"><h2>來源與統計方法</h2><span class="label">更新 __DATE__</span></div><div class="note"><b>本次整合 31 場來源，並非 31 套完整逐題驗證卷。</b><br>2010–2021：沿用 23 份舊版前段檢出與筆記，主要前 3 頁，部分前 5 頁；2020.07 無來源。2022–2025：新增 8 場，整理重點為文字・語彙與文法問題 1–6；下表頁碼以 PDF 頁序計算，可能與頁腳不同。未把閱讀文章、聽解或答案重複計入。舊、新資料辨識範圍不同，不適合直接解讀成年別出題趨勢。<br>重點整理條目按題目語境整理適切用法；文字檢出可能是題幹、選項或干擾選項，不代表正解。未出現在筆記的項目不等於沒考過。來源為民間整理，2024.12 為早期版本、2025.12 含作答註記，沒有宣稱官方認證。網站不重新上傳原題 PDF；僅公開場次與 PDF 頁碼，請在自己的題本對照，不公開私人檔案連結。</div><div class="table-scroll"><table><thead><tr><th>場次</th><th>整理／檢出範圍</th><th>來源狀況</th><th>對照方式</th></tr></thead><tbody>__COVERAGE__</tbody></table></div></section><footer>JLPT N1 / 學習筆記 · 自編解說與例句，原題權利屬各權利人。<br><a href="https://github.com/smartleo123/JLPT-Learning">GitHub 專案 ↗</a> · <a href="data/study.json">結構化學習資料</a> · <a href="METHOD.md">整理方法與限制</a></footer></div><script id="study-data" type="application/json">__DB__</script><script src="app.js" defer></script></body></html>'''
 for key,value in {'__V__':str(v),'__G__':str(g),'__STATIC__':static,'__CONCEPTS__':concept_html,'__COVERAGE__':cov,'__DATE__':db['updated'],'__DB__':json.dumps(db,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')}.items():s=s.replace(key,value)
+for asset in ['styles.css','app.js']:
+ s=s.replace('=\"'+asset+'\"','=\"'+asset+'?v='+hashlib.sha256((root/asset).read_bytes()).hexdigest()[:12]+'\"')
 (root/'index.html').write_text(s);print('Built',len(db['items']),'items')
