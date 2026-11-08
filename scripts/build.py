@@ -1,26 +1,46 @@
 import json,html
 from pathlib import Path
 root=Path(__file__).resolve().parents[1];db=json.loads((root/'data/study.json').read_text());e=html.escape
-concepts=[
-('01','必要條件：沒有 A，就沒有 B','先判斷句子是在說「不可或缺」，還是在說一般原因。',[
-('N あっての N','人や基盤があって初めて成立','健康あっての仕事：健康是工作的基礎。'),('N なくしては＋否定','沒有前項便無法完成','協力なくしては成功できない。'),('V ないことには＋否定','先滿足條件才有辦法判斷','見ないことには判断できない。'),('普通形＋以上（は）','既成前提→責任、決心','約束した以上、守るべきだ。')]),
-('02','讓步：承認之後，要轉到哪裡？','ものの、反面、つつも都有轉折，但結構與焦點不同。',[
-('～ものの','雖然成立，結果不如預期','買ったものの、使っていない。'),('～反面','同一事物同時存在的兩面','便利な反面、費用がかかる。'),('V ます語幹＋つつも','知道／承認，行動仍相反','悪いと知りつつも、繰り返す。'),('～くらいなら','前項不想接受，寧選後項','後悔するくらいなら挑戦する。')]),
-('03','時間：立即發生，還是逐漸改變？','注意辭書形、た形和ている形；差一個形，意思可能不同。',[
-('V 辭書形＋なり','一做 A 就發生 B','帰るなり寝た：敘述接連發生。'),('V ます語幹＋次第','A 完成後立即做 B','着き次第連絡します：預定安排。'),('～うちに','過程中逐漸、自然變化','話すうちに緊張がほぐれた。'),('～てからというもの','轉捩點後持續的改變','就職してからというもの忙しい。')]),
-('04','不能、不得、不肯：不是同一件事','先區分能力、完成量、意志及社會責任，才能排除選項。',[
-('～きれない','不能全部完成','読みきれない：量太多，讀不完。'),('～ようがない','沒有可行手段','連絡先がなく、知らせようがない。'),('～ようとしない','不願意採取行動','説明しようとしない：不肯說。'),('～わけにはいかない','基於立場、責任不能做','約束があり、休むわけにはいかない。')]),
-('05','相乘、交換、契機：因果的不同方向','看到「兩個因素」時，先問它們是合作加強，還是有得有失。',[
-('～と相まって','A 與 B 一起增強結果','音楽が照明と相まって効果を高める。'),('～と引きかえに','獲得 A，同時失去 B','便利さと引きかえに静けさを失う。'),('～を機に','一次事件帶來轉變','卒業を機に引っ越した。'),('～を皮切りに','以 A 為一連串事件的開端','東京公演を皮切りに全国を回る。')]),
-('06','推測與評價：語氣有多強？','不要只把中文翻成「一定／最好」；比較說話者的確信與要求程度。',[
-('～見込みだ','依資料預測未來','完成する見込み：預計完成。'),('～兆しがある','已能看到的跡象','回復の兆し：出現復原徵兆。'),('～に越したことはない','理想的選擇','早いに越したことはない：越早越好。'),('～ざるを得ない','迫於情況只好做','延期せざるを得ない：不得不延期。')]),
-('07','授受與敬語：先找「誰做」','把主語、受惠者與動作方向畫清楚，再選尊敬語或謙讓語。',[
-('おいでくださる','對方來，我方受惠','皆さんがおいでくださいました。'),('お越しいただく','我方承蒙對方來','皆さんにお越しいただきました。'),('伺う','我去／我問的謙讓語','明日そちらへ伺います。'),('お越しになる','對方來的尊敬語','お越しになる際はご連絡ください。')]),
-('08','詞彙用法：換成近義詞為何會錯？','N1 常用題靠的是典型賓語與語境，不能只記中文字義。',[
-('運用／使用／起用','資金・制度／工具／人員','資金を運用する；機械を使用する；選手を起用する。'),('補填／補充／記入','缺損／不足數量／表格','赤字を補填する；物資を補充する；空欄に記入する。'),('手先／手際／手腕','操作靈巧／步驟效率／辦事能力','手先が器用；手際がよい；手腕を発揮する。'),('改修／改正／修正','設施／法律規則／錯誤資料','橋を改修する；法律を改正する；誤りを修正する。')])]
-concept_html=''.join('<article class="concept"><div class="step">'+num+' / 觀念比較</div><h3>'+title+'</h3><p>'+desc+'</p><div class="table-scroll"><table><thead><tr><th>形式</th><th>核心與例子</th></tr></thead><tbody>'+''.join('<tr><td lang="ja">'+e(t)+'</td><td>'+e(meaning)+'<br><span class="small">'+e(ex)+'</span></td></tr>' for t,meaning,ex in rows)+'</tbody></table></div></article>' for num,title,desc,rows in concepts)
+concept_examples=json.loads((root/'data/concept-examples.json').read_text())
+def ruby(parts):
+ return ''.join('<ruby>'+e(p['text'])+'<rt>'+e(p['reading'])+'</rt></ruby>' if p.get('reading') else e(p['text']) for p in parts)
+def example_html(x):
+ return '<div class="example"><span lang="ja">'+ruby(x['exampleParts'])+'</span><div class="translation" lang="zh-Hant">'+e(x['translation'])+'</div></div>'
+concepts=[('01',
+  '必要條件：沒有 A，就沒有 B',
+  '先判斷句子是在說「不可或缺」，還是在說一般原因。',
+  [('N あっての N', '人や基盤があって初めて成立', 0), ('N なくしては＋否定', '沒有前項便無法完成', 1), ('V ないことには＋否定', '先滿足條件才有辦法判斷', 2), ('普通形＋以上（は）', '既成前提→責任、決心', 3)]),
+ ('02',
+  '讓步：承認之後，要轉到哪裡？',
+  'ものの、反面、つつも都有轉折，但結構與焦點不同。',
+  [('～ものの', '雖然成立，結果不如預期', 4), ('～反面', '同一事物同時存在的兩面', 5), ('V ます語幹＋つつも', '知道／承認，行動仍相反', 6), ('～くらいなら', '前項不想接受，寧選後項', 7)]),
+ ('03',
+  '時間：立即發生，還是逐漸改變？',
+  '注意辭書形、た形和ている形；差一個形，意思可能不同。',
+  [('V 辭書形＋なり', '一做 A 就發生 B', 8), ('V ます語幹＋次第', 'A 完成後立即做 B', 9), ('～うちに', '過程中逐漸、自然變化', 10), ('～てからというもの', '轉捩點後持續的改變', 11)]),
+ ('04',
+  '不能、不得、不肯：不是同一件事',
+  '先區分能力、完成量、意志及社會責任，才能排除選項。',
+  [('～きれない', '不能全部完成', 12), ('～ようがない', '沒有可行手段', 13), ('～ようとしない', '不願意採取行動', 14), ('～わけにはいかない', '基於立場、責任不能做', 15)]),
+ ('05',
+  '相乘、交換、契機：因果的不同方向',
+  '看到「兩個因素」時，先問它們是合作加強，還是有得有失。',
+  [('～と相まって', 'A 與 B 一起增強結果', 16), ('～と引きかえに', '獲得 A，同時失去 B', 17), ('～を機に', '一次事件帶來轉變', 18), ('～を皮切りに', '以 A 為一連串事件的開端', 19)]),
+ ('06',
+  '推測與評價：語氣有多強？',
+  '不要只把中文翻成「一定／最好」；比較說話者的確信與要求程度。',
+  [('～見込みだ', '依資料預測未來', 20), ('～兆しがある', '已能看到的跡象', 21), ('～に越したことはない', '理想的選擇', 22), ('～ざるを得ない', '迫於情況只好做', 23)]),
+ ('07',
+  '授受與敬語：先找「誰做」',
+  '把主語、受惠者與動作方向畫清楚，再選尊敬語或謙讓語。',
+  [('おいでくださる', '對方來，我方受惠', 24), ('お越しいただく', '我方承蒙對方來', 25), ('伺う', '我去／我問的謙讓語', 26), ('お越しになる', '對方來的尊敬語', 27)]),
+ ('08',
+  '詞彙用法：換成近義詞為何會錯？',
+  'N1 常用題靠的是典型賓語與語境，不能只記中文字義。',
+  [('運用／使用／起用', '資金・制度／工具／人員', 28), ('補填／補充／記入', '缺損／不足數量／表格', 29), ('手先／手際／手腕', '操作靈巧／步驟效率／辦事能力', 30), ('改修／改正／修正', '設施／法律規則／錯誤資料', 31)])]
+concept_html=''.join('<article class="concept"><div class="step">'+num+' / 觀念比較</div><h3>'+title+'</h3><p>'+desc+'</p><div class="table-scroll"><table><thead><tr><th>形式</th><th>核心與例子</th></tr></thead><tbody>'+''.join('<tr><td lang="ja">'+e(t)+'</td><td>'+e(meaning)+example_html(concept_examples[ex])+'</td></tr>' for t,meaning,ex in rows)+'</tbody></table></div></article>' for num,title,desc,rows in concepts)
 cov=''.join(f'<tr><td>{e(x["name"])}</td><td>前 {x["pages"]} 頁</td><td>{e(x["quality"])}</td><td>依年份對照私人題本</td></tr>' for x in db['coverage'])
-static=''.join('<article class="card"><h3 lang="ja">'+e(x['term'])+'</h3><div class="reading">'+e(x['reading'])+'</div><p>'+e(x['meaning'])+'</p><p>'+e(x['connection'] or x['usage'])+'</p><p>'+e(x['pitfall'])+'</p><div class="example" lang="ja">'+e(x['example'])+'</div><p class="small">檢出 '+str(x['count'])+' 場</p></article>' for x in db['items'])
+static=''.join('<article class="card"><h3 lang="ja">'+e(x['term'])+'</h3><div class="reading">'+e(x['reading'])+'</div><p>'+e(x['meaning'])+'</p><p>'+e(x['connection'] or x['usage'])+'</p><p>'+e(x['pitfall'])+'</p>'+example_html(x)+'<p class="small">檢出 '+str(x['count'])+' 場</p></article>' for x in db['items'])
 v=sum(x['type']=='vocab' for x in db['items']);g=len(db['items'])-v
 s='''<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="JLPT N1 歷年語彙與文法學習筆記：2010–2025 前段題面檢出、近義辨析、文法比較、主動回想與學習進度。"><title>JLPT 考古題與文法筆記</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317614e'/%3E%3Ctext x='32' y='46' font-size='42' text-anchor='middle' fill='white'%3E日%3C/text%3E%3C/svg%3E"></head><body><a href="#study" class="skip">跳至學習條目</a><div class="wrap"><header class="top"><div class="brand"><span class="seal">日</span>N1 STUDY NOTES</div><nav aria-label="頁面導覽"><a href="#study">字詞・文法</a><a href="#concepts">觀念比較</a><a href="#review">主動回想</a><a href="#sources">來源</a></nav></header><section class="hero"><div><div class="eyebrow">2010 — 2025 / Japanese Language Proficiency Test</div><h1>JLPT 考古題與文法筆記</h1><a class="start" href="#study">開始今天的學習 ↓</a></div><aside class="hero-side"><div class="numbers"><div><b>__V__</b><br><small>詞彙條目</small></div><div><b>__G__</b><br><small>文法條目</small></div><div><b>31</b><br><small>場次來源</small></div></div><p class="range">2022–2025 新題已整合<br>每個考點，都回到用法與辨析。</p></aside></section>
 <section aria-labelledby="path-title"><div class="section-head"><h2 id="path-title">每天一小段，讀懂考點</h2><span class="label">建議 20–30 分鐘 / 自訂步調</span></div><div class="plan"><article><div class="step">01 / 先抓反覆出現的線索</div><h3>選 10 個跨年詞彙</h3><p>篩選「至少 2 場」，記一個搭配，再說明它與近義詞的差異。</p></article><article><div class="step">02 / 用對比理解句型</div><h3>讀一組文法觀念</h3><p>依序確認接續、前後關係、語氣限制；用自己的情境造句。</p></article><article><div class="step">03 / 蓋住解說再回想</div><h3>今天學，隔天再說一次</h3><p>收藏不熟條目，練到能說出意思和搭配，再標記「已掌握」。</p></article></div></section>

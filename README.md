@@ -23,3 +23,5 @@ node --check app.js
 ```
 
 把產生的 `index.html` 一起提交。GitHub Pages 從 main 根目錄提供靜態網站，不需要 npm 安裝。原始考題 PDF 不在 repository 中。
+
+例句已附繁體中文翻譯與漢字上方的假名標音（HTML ruby），同步用於閱讀卡片、回想解說、列印與無 JavaScript 閱讀。卡片只顯示總檢出場次。觀念比較表的 32 組例句亦附翻譯與標音。

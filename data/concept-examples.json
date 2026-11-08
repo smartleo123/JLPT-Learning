@@ -1,0 +1,1030 @@
+[
+  {
+    "example": "健康あっての仕事。",
+    "translation": "有健康才能工作。",
+    "exampleParts": [
+      {
+        "text": "健康",
+        "reading": "けんこう"
+      },
+      {
+        "text": "あっての"
+      },
+      {
+        "text": "仕事",
+        "reading": "しごと"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "協力なくしては成功できない。",
+    "translation": "沒有合作就無法成功。",
+    "exampleParts": [
+      {
+        "text": "協力",
+        "reading": "きょうりょく"
+      },
+      {
+        "text": "なくしては"
+      },
+      {
+        "text": "成功",
+        "reading": "せいこう"
+      },
+      {
+        "text": "できない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "見ないことには判断できない。",
+    "translation": "沒親眼看到就無法判斷。",
+    "exampleParts": [
+      {
+        "text": "見",
+        "reading": "み"
+      },
+      {
+        "text": "な"
+      },
+      {
+        "text": "いことには"
+      },
+      {
+        "text": "判断",
+        "reading": "はんだん"
+      },
+      {
+        "text": "できない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "約束した以上、守るべきだ。",
+    "translation": "既然答應了，就應該遵守。",
+    "exampleParts": [
+      {
+        "text": "約束",
+        "reading": "やくそく"
+      },
+      {
+        "text": "した"
+      },
+      {
+        "text": "以上",
+        "reading": "いじょう"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "守",
+        "reading": "まも"
+      },
+      {
+        "text": "る"
+      },
+      {
+        "text": "べきだ"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "買ったものの、使っていない。",
+    "translation": "雖然買了，卻沒有使用。",
+    "exampleParts": [
+      {
+        "text": "買",
+        "reading": "か"
+      },
+      {
+        "text": "っ"
+      },
+      {
+        "text": "たものの"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "使",
+        "reading": "つか"
+      },
+      {
+        "text": "って"
+      },
+      {
+        "text": "いない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "便利な反面、費用がかかる。",
+    "translation": "雖然方便，另一方面卻很花錢。",
+    "exampleParts": [
+      {
+        "text": "便利",
+        "reading": "べんり"
+      },
+      {
+        "text": "な"
+      },
+      {
+        "text": "反面",
+        "reading": "はんめん"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "費用",
+        "reading": "ひよう"
+      },
+      {
+        "text": "がかかる"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "悪いと知りつつも、繰り返す。",
+    "translation": "明知不好，卻仍然一再重複。",
+    "exampleParts": [
+      {
+        "text": "悪",
+        "reading": "わる"
+      },
+      {
+        "text": "い"
+      },
+      {
+        "text": "と"
+      },
+      {
+        "text": "知",
+        "reading": "し"
+      },
+      {
+        "text": "り"
+      },
+      {
+        "text": "つつも"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "繰り返",
+        "reading": "くりかえ"
+      },
+      {
+        "text": "す"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "後悔するくらいなら挑戦する。",
+    "translation": "與其後悔，我寧願挑戰。",
+    "exampleParts": [
+      {
+        "text": "後悔",
+        "reading": "こうかい"
+      },
+      {
+        "text": "するくらいなら"
+      },
+      {
+        "text": "挑戦",
+        "reading": "ちょうせん"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "帰るなり寝た。",
+    "translation": "一回家就睡了。",
+    "exampleParts": [
+      {
+        "text": "帰",
+        "reading": "かえ"
+      },
+      {
+        "text": "る"
+      },
+      {
+        "text": "なり"
+      },
+      {
+        "text": "寝",
+        "reading": "ね"
+      },
+      {
+        "text": "た"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "着き次第連絡します。",
+    "translation": "一到達就會聯絡您。",
+    "exampleParts": [
+      {
+        "text": "着",
+        "reading": "つ"
+      },
+      {
+        "text": "き"
+      },
+      {
+        "text": "次第",
+        "reading": "しだい"
+      },
+      {
+        "text": "連絡",
+        "reading": "れんらく"
+      },
+      {
+        "text": "します"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "話すうちに緊張がほぐれた。",
+    "translation": "聊著聊著，緊張感就放鬆了。",
+    "exampleParts": [
+      {
+        "text": "話",
+        "reading": "はな"
+      },
+      {
+        "text": "す"
+      },
+      {
+        "text": "うちに"
+      },
+      {
+        "text": "緊張",
+        "reading": "きんちょう"
+      },
+      {
+        "text": "がほぐれた"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "就職してからというもの忙しい。",
+    "translation": "自從就業以來就一直很忙。",
+    "exampleParts": [
+      {
+        "text": "就職",
+        "reading": "しゅうしょく"
+      },
+      {
+        "text": "してからというもの"
+      },
+      {
+        "text": "忙",
+        "reading": "いそが"
+      },
+      {
+        "text": "しい"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "読みきれない。",
+    "translation": "無法全部讀完。",
+    "exampleParts": [
+      {
+        "text": "読",
+        "reading": "よ"
+      },
+      {
+        "text": "み"
+      },
+      {
+        "text": "きれない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "連絡先がなく、知らせようがない。",
+    "translation": "沒有聯絡方式，無從通知。",
+    "exampleParts": [
+      {
+        "text": "連絡先",
+        "reading": "れんらくさき"
+      },
+      {
+        "text": "がなく"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "知",
+        "reading": "し"
+      },
+      {
+        "text": "らせ"
+      },
+      {
+        "text": "ようがない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "説明しようとしない。",
+    "translation": "不肯作出說明。",
+    "exampleParts": [
+      {
+        "text": "説明",
+        "reading": "せつめい"
+      },
+      {
+        "text": "し"
+      },
+      {
+        "text": "ようとしない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "約束があり、休むわけにはいかない。",
+    "translation": "因為有約在先，不能休息。",
+    "exampleParts": [
+      {
+        "text": "約束",
+        "reading": "やくそく"
+      },
+      {
+        "text": "があり"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "休",
+        "reading": "やす"
+      },
+      {
+        "text": "む"
+      },
+      {
+        "text": "わけにはいかない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "音楽が照明と相まって効果を高める。",
+    "translation": "音樂與燈光相互配合，提升了效果。",
+    "exampleParts": [
+      {
+        "text": "音楽",
+        "reading": "おんがく"
+      },
+      {
+        "text": "が"
+      },
+      {
+        "text": "照明",
+        "reading": "しょうめい"
+      },
+      {
+        "text": "と"
+      },
+      {
+        "text": "相",
+        "reading": "あい"
+      },
+      {
+        "text": "まって"
+      },
+      {
+        "text": "効果",
+        "reading": "こうか"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "高",
+        "reading": "たか"
+      },
+      {
+        "text": "め"
+      },
+      {
+        "text": "る"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "便利さと引きかえに静けさを失う。",
+    "translation": "換來便利，卻失去了寧靜。",
+    "exampleParts": [
+      {
+        "text": "便利",
+        "reading": "べんり"
+      },
+      {
+        "text": "さと"
+      },
+      {
+        "text": "引",
+        "reading": "ひ"
+      },
+      {
+        "text": "き"
+      },
+      {
+        "text": "かえに"
+      },
+      {
+        "text": "静",
+        "reading": "しず"
+      },
+      {
+        "text": "けさ"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "失",
+        "reading": "うしな"
+      },
+      {
+        "text": "う"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "卒業を機に引っ越した。",
+    "translation": "以畢業為契機搬了家。",
+    "exampleParts": [
+      {
+        "text": "卒業",
+        "reading": "そつぎょう"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "機",
+        "reading": "き"
+      },
+      {
+        "text": "に"
+      },
+      {
+        "text": "引っ越",
+        "reading": "ひっこ"
+      },
+      {
+        "text": "し"
+      },
+      {
+        "text": "た"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "東京公演を皮切りに全国を回る。",
+    "translation": "以東京公演為開端，巡迴全國。",
+    "exampleParts": [
+      {
+        "text": "東京公演",
+        "reading": "とうきょうこうえん"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "皮切",
+        "reading": "かわきり"
+      },
+      {
+        "text": "りに"
+      },
+      {
+        "text": "全国",
+        "reading": "ぜんこく"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "回",
+        "reading": "まわ"
+      },
+      {
+        "text": "る"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "完成する見込みだ。",
+    "translation": "預計可以完成。",
+    "exampleParts": [
+      {
+        "text": "完成",
+        "reading": "かんせい"
+      },
+      {
+        "text": "す"
+      },
+      {
+        "text": "る"
+      },
+      {
+        "text": "見込",
+        "reading": "みこ"
+      },
+      {
+        "text": "み"
+      },
+      {
+        "text": "だ"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "回復の兆しがある。",
+    "translation": "有恢復的徵兆。",
+    "exampleParts": [
+      {
+        "text": "回復",
+        "reading": "かいふく"
+      },
+      {
+        "text": "の"
+      },
+      {
+        "text": "兆",
+        "reading": "きざ"
+      },
+      {
+        "text": "し"
+      },
+      {
+        "text": "がある"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "早いに越したことはない。",
+    "translation": "越早越好。",
+    "exampleParts": [
+      {
+        "text": "早",
+        "reading": "はや"
+      },
+      {
+        "text": "い"
+      },
+      {
+        "text": "に"
+      },
+      {
+        "text": "越",
+        "reading": "こ"
+      },
+      {
+        "text": "し"
+      },
+      {
+        "text": "たことはない"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "延期せざるを得ない。",
+    "translation": "不得不延期。",
+    "exampleParts": [
+      {
+        "text": "延期",
+        "reading": "えんき"
+      },
+      {
+        "text": "せざるを"
+      },
+      {
+        "text": "得",
+        "reading": "え"
+      },
+      {
+        "text": "な"
+      },
+      {
+        "text": "い"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "皆さんがおいでくださいました。",
+    "translation": "各位都蒞臨了。",
+    "exampleParts": [
+      {
+        "text": "皆",
+        "reading": "みな"
+      },
+      {
+        "text": "さん"
+      },
+      {
+        "text": "がおいでくださいました"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "皆さんにお越しいただきました。",
+    "translation": "承蒙各位蒞臨。",
+    "exampleParts": [
+      {
+        "text": "皆",
+        "reading": "みな"
+      },
+      {
+        "text": "さん"
+      },
+      {
+        "text": "にお"
+      },
+      {
+        "text": "越",
+        "reading": "こ"
+      },
+      {
+        "text": "し"
+      },
+      {
+        "text": "いただきました"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "明日そちらへ伺います。",
+    "translation": "明天我會前往您那裡拜訪。",
+    "exampleParts": [
+      {
+        "text": "明日",
+        "reading": "あした"
+      },
+      {
+        "text": "そちらへ"
+      },
+      {
+        "text": "伺",
+        "reading": "うかが"
+      },
+      {
+        "text": "い"
+      },
+      {
+        "text": "ます"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "お越しになる際はご連絡ください。",
+    "translation": "您要來時，請先聯絡。",
+    "exampleParts": [
+      {
+        "text": "お"
+      },
+      {
+        "text": "越",
+        "reading": "こ"
+      },
+      {
+        "text": "し"
+      },
+      {
+        "text": "になる"
+      },
+      {
+        "text": "際",
+        "reading": "さい"
+      },
+      {
+        "text": "はご"
+      },
+      {
+        "text": "連絡",
+        "reading": "れんらく"
+      },
+      {
+        "text": "ください"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "資金を運用する；機械を使用する；選手を起用する。",
+    "translation": "運用資金；使用機械；起用選手。",
+    "exampleParts": [
+      {
+        "text": "資金",
+        "reading": "しきん"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "運用",
+        "reading": "うんよう"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "機械",
+        "reading": "きかい"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "使用",
+        "reading": "しよう"
+      },
+      {
+        "text": "す"
+      },
+      {
+        "text": "る"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "選手",
+        "reading": "せんしゅ"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "起用",
+        "reading": "きよう"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "赤字を補填する；物資を補充する；空欄に記入する。",
+    "translation": "填補虧損；補充物資；填寫空白欄位。",
+    "exampleParts": [
+      {
+        "text": "赤字",
+        "reading": "あかじ"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "補填",
+        "reading": "ほてん"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "物資",
+        "reading": "ぶっし"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "補充",
+        "reading": "ほじゅう"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "空欄",
+        "reading": "くうらん"
+      },
+      {
+        "text": "に"
+      },
+      {
+        "text": "記入",
+        "reading": "きにゅう"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "手先が器用；手際がよい；手腕を発揮する。",
+    "translation": "手很靈巧；做事俐落；發揮本領。",
+    "exampleParts": [
+      {
+        "text": "手先",
+        "reading": "てさき"
+      },
+      {
+        "text": "が"
+      },
+      {
+        "text": "器用",
+        "reading": "きよう"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "手際",
+        "reading": "てぎわ"
+      },
+      {
+        "text": "がよい"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "手腕",
+        "reading": "しゅわん"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "発揮",
+        "reading": "はっき"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  },
+  {
+    "example": "橋を改修する；法律を改正する；誤りを修正する。",
+    "translation": "整修橋梁；修訂法律；修正錯誤。",
+    "exampleParts": [
+      {
+        "text": "橋",
+        "reading": "はし"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "改修",
+        "reading": "かいしゅう"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "法律",
+        "reading": "ほうりつ"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "改正",
+        "reading": "かいせい"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "；"
+      },
+      {
+        "text": "誤",
+        "reading": "あやま"
+      },
+      {
+        "text": "り"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "修正",
+        "reading": "しゅうせい"
+      },
+      {
+        "text": "する"
+      },
+      {
+        "text": "。"
+      }
+    ]
+  }
+]

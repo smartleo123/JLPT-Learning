@@ -34,3 +34,5 @@
 `data/study.json` 是權威內容；`scripts/build.py` 產生內嵌資料和無 JavaScript 閱讀備援的 `index.html`。`app.js` 提供篩選、收藏、回想與進度匯入匯出；`styles.css` 提供響應式樣式。
 
 進度僅存於本機瀏覽器，使用者可匯出 JSON 備份。沿用舊收藏鍵 `jlpt_n1_favs`，已掌握條目使用穩定 ID；沒有外部分析追蹤或 API 金鑰。
+
+例句翻譯及讀音存於 `data/study.json`；比較表例句存於 `data/concept-examples.json`。`exampleParts` 以原文字串及假名分段保存，合併後必須與 `example` 完全相同。讀音經詞典轉換後依上下文修正（如「今日は」「目下」「一日」「芳しく」），以 HTML ruby 顯示於漢字上方；翻譯是例句的繁體中文解釋。建置不需依賴線上翻譯或標音服務。

@@ -18,3 +18,14 @@ assert not re.search(r'__[A-Z]+__',s)
 assert 'drive.google.com' not in s
 assert 'drive.google.com' not in (root/'data/study.json').read_text()
 print(f'PASS: {len(d["items"])} unique entries, 31 sources, count invariants, embedded data and local assets')
+concepts=json.loads((root/'data/concept-examples.json').read_text())
+assert len(concepts)==32
+for x in d['items']+concepts:
+ assert x['translation'].strip()
+ assert ''.join(p['text'] for p in x['exampleParts'])==x['example']
+ for p in x['exampleParts']:
+  if re.search('[一-鿿々]',p['text']): assert re.fullmatch('[ぁ-ゖー]+',p.get('reading','')),p
+assert '2022 後 ${x.recentCount}' not in (root/'app.js').read_text()
+assert 'ruby-position:over' in (root/'styles.css').read_text()
+assert s.count('class="translation"')==429
+print('PASS: all 397 card examples and 32 comparison examples have Chinese and complete ruby segments')
